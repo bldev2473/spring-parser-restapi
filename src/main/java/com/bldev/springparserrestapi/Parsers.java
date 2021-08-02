@@ -17,4 +17,8 @@ public class Parsers {
     public void setParsers(List<Parser> parsers) {
         this.parsers = parsers;
     }
+
+    public void addParser(Parser parser) {
+        this.parsers.add(parser);
+    }
 }

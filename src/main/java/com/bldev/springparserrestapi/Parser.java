@@ -10,7 +10,7 @@ public class Parser {
     private String name;
 
     Parser() {
-        
+
     }
 
     Parser(String name) {
