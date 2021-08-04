@@ -32,4 +32,9 @@ public class RestParserConfiguration {
             log.info("Preloading " + repository.save(new Parser("Select Parser")));
         };
     }
+
+    @Bean
+    Listener listener() {
+        return new Listener();
+    }
 }

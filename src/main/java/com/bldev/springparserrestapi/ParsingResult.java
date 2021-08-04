@@ -11,8 +11,6 @@ public class ParsingResult {
 
     private String parsingType;
     private String fileName;
-    private List<String> tableList;
-
     public Long getId() {
         return id;
     }
@@ -37,11 +35,4 @@ public class ParsingResult {
         this.fileName = fileName;
     }
 
-    public List<String> getTableList() {
-        return tableList;
-    }
-
-    public void setTableList(List<String> tableList) {
-        this.tableList = tableList;
-    }
 }
