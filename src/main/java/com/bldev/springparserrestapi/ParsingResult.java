@@ -11,6 +11,15 @@ public class ParsingResult {
 
     private String parsingType;
     private String fileName;
+    private String lineNumber;
+    private String tableName;
+
+    ParsingResult(String fileName, String lineNumber, String tableName) {
+        this.fileName = fileName;
+        this.lineNumber = lineNumber;
+        this.tableName = tableName;
+    }
+
     public Long getId() {
         return id;
     }
@@ -35,4 +44,19 @@ public class ParsingResult {
         this.fileName = fileName;
     }
 
+    public String getLineNumber() {
+        return lineNumber;
+    }
+
+    public void setLineNumber(String lineNumber) {
+        this.lineNumber = lineNumber;
+    }
+
+    public String getTableName() {
+        return tableName;
+    }
+
+    public void setTableName(String tableName) {
+        this.tableName = tableName;
+    }
 }
