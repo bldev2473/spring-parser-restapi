@@ -14,6 +14,10 @@ public class ParsingResult {
     private String lineNumber;
     private String tableName;
 
+    ParsingResult() {
+
+    }
+
     ParsingResult(String fileName, String lineNumber, String tableName) {
         this.fileName = fileName;
         this.lineNumber = lineNumber;

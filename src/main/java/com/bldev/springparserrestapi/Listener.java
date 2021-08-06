@@ -22,11 +22,12 @@ public class Listener {
 //    }
 
     @KafkaListener(
-            topics = "json-parsing-result",
-            groupId = "json-parsing-result-group-00"
+            topics = "parsing-result1",
+            groupId = "parsing-result1-group-00"
     )
     public void recordListener2(ConsumerRecord<String, ParsingResult> record) {
-//        log.info(record.toString());
-        repository.save(new ParsingResult(record.value().getFileName(), record.value().getLineNumber(), record.value().getTableName()));
+        log.info(record.toString());
+//        repository.save(new ParsingResult(record.value().getFileName(), record.value().getLineNumber(), record.value().getTableName()));
+        repository.save(record.value());
     }
 }

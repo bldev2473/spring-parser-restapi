@@ -76,11 +76,12 @@ public class RestParserController {
                 .collect(Collectors.toList());
 
         return CollectionModel.of(parsingResults,
-                linkTo(methodOn(RestParserController.class).getRestParsersList()).withSelfRel());
+                linkTo(methodOn(RestParserController.class).getRestParsingResults()).withSelfRel());
     }
 
-    public EntityModel<ParsingResult> getRestParsingResult(Long id) {
-        ParsingResult parsingResult = parsingResultRepository.findById(id).orElseThrow(() -> new ParserNotFoundException(id));
+    @RequestMapping("/parsingResults/{id}")
+    public EntityModel<ParsingResult> getRestParsingResult(@PathVariable Long id) {
+        ParsingResult parsingResult = parsingResultRepository.findById(id).orElseThrow(() -> new ParsingResultNotFoundException(id));
         return parsingResultModelAssembler.toModel(parsingResult);
     }
 }
