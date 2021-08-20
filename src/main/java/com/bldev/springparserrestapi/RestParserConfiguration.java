@@ -34,7 +34,7 @@ public class RestParserConfiguration {
     }
 
     @Bean
-    Listener listener() {
-        return new Listener();
+    RestApiConsumer listener() {
+        return new RestApiConsumer();
     }
 }

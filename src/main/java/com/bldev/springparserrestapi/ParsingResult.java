@@ -7,6 +7,9 @@ import java.util.List;
 
 @Entity
 public class ParsingResult {
+    private String timestamp;
+    private String userAgent;
+
     private @Id @GeneratedValue Long id;
 
     private String parsingType;
@@ -18,7 +21,9 @@ public class ParsingResult {
 
     }
 
-    ParsingResult(String fileName, String lineNumber, String tableName) {
+    ParsingResult(String timestamp, String userAgent, String fileName, String lineNumber, String tableName) {
+        this.timestamp = timestamp;
+        this.userAgent = userAgent;
         this.fileName = fileName;
         this.lineNumber = lineNumber;
         this.tableName = tableName;
